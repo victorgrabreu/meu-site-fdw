@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta>
+    <meta>
+    <title>Portfólio Pessoal</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <!-- Frame é o local onde ficarão localizados os botões da página para ter uma navegação melhor, através de ancoragem-->
+    <div class="frame">
+        <a href="#informacoes">Informações Pessoais</a>
+        <a href="#formacao">Formação Acadêmica</a>
+        <a href="#portfolio">Portfólio</a>
+        <a href="#contato">Contato</a>
+    </div>
+    <div class= "info"> 
+        <h1 id="informacoes">Informações Pessoais</h1>
+        <p>
+           Olá! Meu nome é Victor, sou um engenheiro civil pernambucano de 27 anos ávido por aprender coisas novas.
+           Atualmente, trabalho como engenheiro de planejamento e estou me aventurando em áreas para desenvolver novos produtos.
+        </p>
+        <p>
+        Meus principais hobbies são a leitura, o vôlei e os circuitos de bicicleta dos fins de semana.
+        </p>
+        
+        <h1 id="formacao">Formação Acadêmica</h1>
+        <p>
+            - Formado em Engenharia Civil pela UFPE em 2023.<br>
+            - Atualmente trabalhando como Engenheiro de Planejamento.<br>
+            - Cursando Análise e Desenvolvimento de sistemas na Uninter (Previsão de conclusão: maio/2025).<br>
+        </p>
+        <p>
+            Informações complementares: <br>
+            - Técnico em Edificações, IFPE; <br>
+            - Inglês avançado; <br>
+            - Experiência em controle de orçamento e planejamento de obras civis.
+        </p>
+
+        <h1 id="portfolio">Portfólio</h1>
+        <p>
+            <h2> Portfólio em desenvolvimento!</h2>
+        </p>
+    </div>
+
+    <!-- A calculadora foi um dos meus primeiros projetos que fiz envolvendo HTML/Scripts.
+    O script funciona com inputs e utilizando apppendoToDisplay para mostrar os números quando selecionados. -->
+    <h1>Calculadora</h1>
+    <section id="calculadora-section">
+        <div class="calculator">
+            <input type="text" id="display" disabled>
+            <input type="button" value="1" onclick="appendToDisplay('1')">
+            <input type="button" value="2" onclick="appendToDisplay('2')">
+            <input type="button" value="3" onclick="appendToDisplay('3')">
+            <br>
+            <input type="button" value="4" onclick="appendToDisplay('4')">
+            <input type="button" value="5" onclick="appendToDisplay('5')">
+            <input type="button" value="6" onclick="appendToDisplay('6')">
+            <br>
+            <input type="button" value="7" onclick="appendToDisplay('7')">
+            <input type="button" value="8" onclick="appendToDisplay('8')">
+            <input type="button" value="9" onclick="appendToDisplay('9')">
+            <br>
+            <input type="button" value="+" class="operation" onclick="appendToDisplay('+')">
+            <input type="button" value="-" class="operation" onclick="appendToDisplay('-')">
+            <input type="button" value="*" class="operation" onclick="appendToDisplay('*')">
+            <br>
+            <input type="button" value="C" class="operation" onclick="clearDisplay()">
+            <input type="button" value="0" onclick="appendToDisplay('0')">
+            <input type="button" value="." onclick="appendToDisplay('.')">
+            <br>
+            <input type="button" value="=" class="operation" onclick="calculate()">
+            <input type="button" value="/" class="operation" onclick="appendToDisplay('/')">
+        </div>
+    </section>
+
+<!-- Na funcionalidade o "contact" não possui script para de fato funcionar o envio das mensagens, mas ele tem as colunas
+e as linhas que o fazem dar um espaço-->
+<div class="contact-form-info">
+    <h1 id="contato">Contato</h1>
+        <p>Deseja entrar em contato? Basta preencher o formulário abaixo:<br>
+    </p>
+    
+    <form>
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" size="30"><br><br>
+        
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" size="30"><br><br>
+        
+        <label for="mensagem">Digite sua Mensagem:</label><br>
+        <textarea id="mensagem" name="mensagem" rows="6" cols="30"></textarea><br><br>
+        
+        <input type="submit" value="Enviar">
+    </form>
+</div>
+
+<!-- A parte do script para a funcionalidade da calculadora. Facilita muito já ter a função calculate
+para a realização de calculos. E mais uma vez o appendToDisplay para mostrar os valores e realizar o calculo.
+E a função clearDisplay que é justamente o botão "C" da calculadora para limpar os valores.-->
+    <script>
+        function appendToDisplay(value) {
+            document.getElementById("display").value += value;
+        }
+
+        function calculate() {
+            var display = document.getElementById("display");
+            try {
+                display.value = eval(display.value);
+            } catch (e) {
+                display.value = "Erro";
+            }
+        }
+
+        function clearDisplay() {
+            document.getElementById("display").value = "";
+        }
+    </script>
+</body>
+</html>

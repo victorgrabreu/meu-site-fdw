@@ -1,0 +1,87 @@
+/* Coloquei as cores mais frias para tirar um pouco da simplicidade da página dando uma cor azul clara.*/
+
+body {
+    background-color: #f0f8ff; 
+    font-family: Arial, sans-serif; 
+}
+
+.frame {
+    width: 100%;
+    background-color: #4682b4; 
+    text-align: center; 
+}
+
+.frame a {
+    display: inline-block;
+    padding: 12px;
+    text-decoration: none;
+    color: #fff; 
+}
+
+.frame a:hover {
+    background-color: #90caf9; 
+}
+
+/* Organizei a calculadora e as margens por píxel para ficar bem aparente na página. */
+.calculator {
+    width: 200px;
+    margin: 10px auto 20px; 
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.calculator input[type="text"] {
+    width: calc(100% - 2px);
+    margin-bottom: 12px;
+    padding: 5px;
+}
+
+.calculator input[type="button"] {
+    width: calc(100% / 3 - 15px);
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.calculator input[type="button"].operation {
+    width: calc(100% / 0 - 0 px);
+}
+
+#contato {
+    margin-top: 200px;
+
+}
+
+#calculadora {
+    margin-top: 120px; 
+    text-align: center;
+}
+
+#informacoes {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.info {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #4682b4; 
+}
+
+p {
+    text-align: justify;
+    color: #333; 
+}
+
+.contact-form-info {
+    text-align: center;
+    margin-top: 20px;
+}
